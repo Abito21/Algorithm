@@ -27,3 +27,17 @@ def evaluate_polynomial(coefficients: list[int], x: int) -> int:
     for i, coefficient in enumerate(coefficients):
         total += coefficient * (x ** (degree - i))
     return total
+
+"""
+# Solution 2:
+# 2x² + 3x + 4 = ((2)x+3)x+4
+# total = 0
+# total = 0*2 + 2 = 2
+# total = 2*2 + 3 = 7
+# total = 7*2 + 4 = 18
+def evaluate_polynomial(coefficients: list[int], x: int) -> int:
+    total = 0
+    for coefficient in coefficients:
+        total = total * x + coefficient
+    return total
+"""
