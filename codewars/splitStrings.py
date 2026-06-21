@@ -16,3 +16,14 @@ def solution(s):
   for char in range(0, len(s), 2):
     arrChar.append(s[char:char+2])
   return arrChar
+
+"""
+# Solution Using Recursion:
+def solution(s):
+  if len(s) == 0:
+    return []
+  elif len(s):
+    return [s + '_']
+  else:
+    return [s[:2]] + solution(s[2:])
+"""
