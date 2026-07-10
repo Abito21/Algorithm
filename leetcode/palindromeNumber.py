@@ -40,3 +40,13 @@ class Solution:
         x //= 10
         
       return original == reverse
+
+"""
+Another Solution
+
+Change into string
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        s = str(x)
+        return s == s[::-1]
+"""
