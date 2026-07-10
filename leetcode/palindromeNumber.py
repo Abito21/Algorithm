@@ -44,9 +44,37 @@ class Solution:
 """
 Another Solution
 
-Change into string
+Solution 2 : Change into string
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         s = str(x)
         return s == s[::-1]
+
+Solution 3 : Change into string with manual step
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        left = 0
+        right = len(x) - 1
+
+        while left < right:
+            if x[left] != x[right]:
+                return False
+            left += 1
+            right -= 1
+            
+        return True
+
+Solution 4 : From Leetcode
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0 or (x % 10 == 0 and x != 0):
+            return False
+
+        reversed_half = 0
+
+        while x > reversed_half:
+            reversed_half = reversed_half * 10 + x % 10
+            x //= 10
+
+        return x == reversed_half or x == reversed_half // 10
 """
